@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package dgp.proto;
+
+message SceneMetadata {
+    string country = 1;
+    string sensor_id = 2;
+    string time_of_day = 3;
+    Weather weather = 4;
+}
+
+message Weather {
+    double clouds = 1;
+    double rain = 2;
+    double snow = 3;
+    double fog = 4;
+}
+
+message CameraFrameMetadata {
+    string road = 1;
+    string partition_0 = 2;
+    bool lane_change = 3;
+    bool branching_in_view = 4;
+    bool ego_merging = 5;
+    bool merging_in_view = 6;
+    bool elevation_variation = 7;
+    string type_of_scene = 8;
+    double road_radius = 9;
+}
