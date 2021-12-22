@@ -3,7 +3,7 @@
 from collections import OrderedDict
 
 from dgp.annotations.ontology import (
-    AgentBehaviorOntology, BoundingBoxOntology, InstanceSegmentationOntology, KeyPointOntology, Ontology,
+    Ontology, AgentBehaviorOntology, BoundingBoxOntology, InstanceSegmentationOntology, KeyPointOntology, Ontology,
     SemanticSegmentationOntology
 )
 
@@ -25,6 +25,7 @@ ONTOLOGY_REGISTRY = {
     "instance_segmentation_2d": InstanceSegmentationOntology,
     "instance_segmentation_3d": InstanceSegmentationOntology,
     "key_point_2d": KeyPointOntology,
+    "key_line_2d": Ontology,
     "agent_behavior": AgentBehaviorOntology,
     "depth": None,
     "surface_normals_2d": None,
@@ -40,6 +41,7 @@ ANNOTATION_REGISTRY = {
     "semantic_segmentation_2d": SemanticSegmentation2DAnnotation,
     "instance_segmentation_2d": PanopticSegmentation2DAnnotation,
     "key_point_2d": KeyPoint2DAnnotationList,
+    "key_line_2d": Annotation,
     "depth": DenseDepthAnnotation
 }
 
